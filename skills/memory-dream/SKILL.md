@@ -42,9 +42,10 @@ approval step.
    group and report it. If the path already exists, skip the group and
    report it.
 6. Read the merged page back. Check that every fact from every source page
-   is in it. If a fact is missing, fix the merged page with
-   `expected_page_id` set to the `page_id` you just read. If that write fails
-   a precondition, stop the group before any pointer write.
+   is in it. If a fact is missing, rewrite the merged page with every field
+   from step 5 except `create_only`, plus `expected_page_id` set to the
+   `page_id` you just read. If that write fails a precondition, stop the
+   group before any pointer write.
 7. Read each merged-away page again. If it is now pinned, skip it. Otherwise
    rewrite it at the same path with:
    - `expected_page_id`: the `page_id` you just read
