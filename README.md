@@ -9,6 +9,10 @@ others via `.agents/skills/`-style vendoring).
 - [`adr-writer`](skills/adr-writer/SKILL.md) — propose and write Architecture
   Decision Records (ADRs) at the moment a decision is made, matching whatever
   ADR convention a repo already has (or a sane default if it has none).
+- [`explain-page`](skills/explain-page/SKILL.md) — type `/explain-page` to
+  turn a lot of information into a plain, top-to-bottom explainer page with
+  diagrams, written for a reader who lacks the context. Keeps the source's own
+  names (the table names in the email) so the page matches what you read.
 - [`memory-dream`](skills/memory-dream/SKILL.md) — a manual "dream" pass for
   [ai-memory](https://github.com/akitaonrails/ai-memory): merge overlapping
   memory pages with your own model, after you approve the plan, when ai-memory
